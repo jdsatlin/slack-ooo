@@ -14,7 +14,7 @@ var config = {
   },
   // Slack related configuraton
   slack: {
-    token: 'xoxb-foo', // The token for your slack bot
+    token: process.env.SLACK_TOKEN, // The token for your slack bot
     autoReconnect: true // if you want the bot to attempt reconnection
   }
 };

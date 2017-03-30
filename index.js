@@ -4,6 +4,10 @@ const logger = require('./lib/logger')();
 const redact = require('redact-object');
 const Bot = require('./lib/bot');
 const Config = require('./lib/config');
+const dotEnv = require('dotenv').config();
+const moment = require('moment');
+const dbread = require('./lib/dbread.js')
+
 
 let config;
 
@@ -33,3 +37,4 @@ logger.info('Using the following configuration:', redact(config, ['token']));
 logger.info('Starting Bot...');
 const bot = new Bot(config);
 bot.start();
+console.log(moment())
